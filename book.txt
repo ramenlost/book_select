@@ -1,0 +1,26 @@
+#include <stdio.h>
+struct book{
+    char name[50];
+    int id_no;
+    float price;
+};
+void main(){
+    int ID,found;
+    struct book info[3]={{"atomic habits",32,450.00},
+                      {"richdad-poordad",36,550.00},
+                      {"psycho cybernatics",37,500.00}};
+     printf("enter the ID of book:");
+     scanf("%d",&ID);
+     for(int i=0;i<3;i++){
+        if(info[i].id_no==ID){
+            printf("current price is:%.2f;now enter new price:",info[i].price);
+            scanf("%f",&info[i].price);
+            printf("the prices have been updated successfully!!\n");
+            found=1;
+            break;
+        }
+    }
+        if(found==0){
+         printf("this book is currently unavailable");   
+        }
+}
