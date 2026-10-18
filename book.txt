@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 struct book{
     char name[50];
     int id_no;
